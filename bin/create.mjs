@@ -194,7 +194,7 @@ export default async function(project) {
         await generateCode(project, answers.ask1)
         const packageManager = getPackageManager(project, answers.ask2)
         await installDependencies(packageManager, project)
-        await postConfig(packageManager, project)
+        // await postConfig(packageManager, project)
         log(`🎉  项目 ${chalk.yellow(project)} 创建成功！.`)
     } finally {
         spinner.clear()
