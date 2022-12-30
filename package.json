@@ -26,7 +26,7 @@
     "build": "vite --mode development build",
     "nuomi": "node ./bin/index.mjs",
     "eslint-format": "eslint --fix --format node_modules/eslint-friendly-formatter/index.js",
-    "postinstall": "npm link nuomi"
+    "postinstall": "npm link nuomi-app"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
