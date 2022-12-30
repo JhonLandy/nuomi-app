@@ -1,0 +1,8 @@
+dist-app
+yarn.error.log*
+dist-electron
+.vscode
+node_modules
+.idea
+release
+packages
