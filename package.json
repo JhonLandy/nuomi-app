@@ -1,6 +1,6 @@
 {
   "name": "nuomi-app",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "脚手架",
   "main": "./bin/index.mjs",
   "author": "ycl",
@@ -25,7 +25,8 @@
   "scripts": {
     "build": "vite --mode development build",
     "nuomi": "node ./bin/index.mjs",
-    "eslint-format": "eslint --fix --format node_modules/eslint-friendly-formatter/index.js"
+    "eslint-format": "eslint --fix --format node_modules/eslint-friendly-formatter/index.js",
+    "postinstall": "npm link nuomi"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
