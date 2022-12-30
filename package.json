@@ -1,6 +1,6 @@
 {
   "name": "nuomi-app",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "脚手架",
   "main": "./bin/index.mjs",
   "author": "ycl",
@@ -15,7 +15,8 @@
     "download-git-repo": "^3.0.2",
     "execa": "^6.1.0",
     "inquirer": "^9.1.4",
-    "lru-cache": "^7.14.1"
+    "lru-cache": "^7.14.1",
+    "semver": "^7.3.8"
   },
   "bin": {
     "nuomi": "./bin/index.mjs"
