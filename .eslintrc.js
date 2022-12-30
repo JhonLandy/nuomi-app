@@ -15,8 +15,7 @@ module.exports = {
         commonjs: true,
     },
     extends: [
-        "plugin:eslint/recommended",
-        "plugin:@typescript-eslint/recommended",
+        "eslint:recommended",
         "plugin:prettier/recommended",
     ],
     rules: {
