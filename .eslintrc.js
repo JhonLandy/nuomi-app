@@ -1,3 +1,4 @@
+/* eslint-disable */
 module.exports = {
     parserOptions: {
         ecmaVersion: "latest",
@@ -13,13 +14,10 @@ module.exports = {
         node: true,
         commonjs: true,
     },
-    extends: [
-        "eslint:recommended",
-        "plugin:prettier/recommended",
-    ],
+    extends: ["eslint:recommended", "plugin:prettier/recommended"],
     rules: {
         "no-var": "error",
         "no-empty": "warn",
-        "no-undef-var": "error"
+        "no-undef-var": 0,
     },
 };
