@@ -82,7 +82,7 @@ let _hasPnpm;
 let _pnpmVersion;
 const _pnpmProjects = new LRU({
     max: 10,
-    maxAge: 1000,
+    ttl: 1000,
 });
 
 function getPnpmVersion() {
@@ -134,7 +134,7 @@ function checkPnpm(result) {
 
 const _npmProjects = new LRU({
     max: 10,
-    maxAge: 1000,
+    ttl: 1000,
 });
 export const hasProjectNpm = cwd => {
     if (_npmProjects.has(cwd)) {
