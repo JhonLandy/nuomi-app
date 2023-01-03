@@ -1,0 +1,18 @@
+{
+  "presets": [
+    ["@babel/preset-env", {
+    "useBuiltIns": "usage",
+    "modules": false,
+    "corejs": 3
+    }],
+    ["@babel/preset-typescript", {
+      "isTSX": true,
+      "allowNamespaces": true,
+      "allExtensions": true
+    }]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-syntax-dynamic-import"
+  ]
+}

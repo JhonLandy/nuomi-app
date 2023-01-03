@@ -194,6 +194,9 @@ export default async function (project) {
         await installDependencies(packageManager, project);
         // await postConfig(packageManager, project)
         log(`🎉  项目 ${chalk.yellow(project)} 创建成功！.`);
+        console.log(
+            `🏃要运行项目，请按照下面脚本执行: \n 1.cd ${project} \n 2.${packageManager} run dev `
+        );
     } finally {
         spinner.clear();
     }
