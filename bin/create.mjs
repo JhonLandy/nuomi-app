@@ -84,7 +84,7 @@ async function askQuestions() {
             askAnswered: true,
             choices: [
                 { name: "ts + webpack + electron + vue3", value: "webpack" },
-                { name: "ts + vite + electron + vue3", value: "webpack" },
+                { name: "ts + vite + electron + vue3", value: "vite" },
             ],
         },
         {
