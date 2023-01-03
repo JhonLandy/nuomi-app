@@ -8,6 +8,12 @@
   "files": [
     "bin"
   ],
+  "keywords": ["electron", "vue3", "webpack", "vite"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JhonLandy/nuomi-app",
+    "directory": "一个项目下载脚手架，内置eclecton脚手架"
+  },
   "dependencies": {
     "@types/inquirer": "^9.0.3",
     "chalk": "^5.2.0",

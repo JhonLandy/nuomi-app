@@ -190,7 +190,6 @@ export default async function(project) {
     try {
         const answers = await askQuestions()
         log(`🚀  开始生成代码...`)
-        // spinner.start("🚀  开始生成代码...")
         await generateCode(project, answers.ask1)
         const packageManager = getPackageManager(project, answers.ask2)
         await installDependencies(packageManager, project)
