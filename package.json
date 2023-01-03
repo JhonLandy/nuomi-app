@@ -1,6 +1,6 @@
 {
   "name": "nuomi-app",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "脚手架",
   "main": "./bin/index.mjs",
   "author": "ycl",
@@ -8,7 +8,12 @@
   "files": [
     "bin"
   ],
-  "keywords": ["electron", "vue3", "webpack", "vite"],
+  "keywords": [
+    "electron",
+    "vue3",
+    "webpack",
+    "vite"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/JhonLandy/nuomi-app",
