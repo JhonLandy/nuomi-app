@@ -1,0 +1,32 @@
+appId: "com.example.app"
+asar: true
+electronDownload:
+  version: "20.1.2"
+  mirror: "https://npm.taobao.org/mirrors/electron/"
+  platform: "win32"
+  arch: "x64"
+directories:
+    output: "packages"
+files:
+    - "dist-electron"
+    - "dist-app"
+    - "extensions"
+    - "src/preload.js"
+mac:
+    artifactName: "${productName}_${version}.${ext}"
+    target:
+      - "dmg"
+win:
+    target:
+        - target: "nsis"
+          arch:
+            - "x64"
+    artifactName: "${productName}_${version}.${ext}"
+    icon: "xxx/icon.ico"
+nsis:
+    oneClick: false
+    perMachine: false
+    allowToChangeInstallationDirectory: true
+    deleteAppDataOnUninstall: true
+
+

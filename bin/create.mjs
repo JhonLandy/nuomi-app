@@ -59,8 +59,7 @@ function generateCode(project, value) {
             { clone: true },
             function (err) {
                 if (err) {
-                    reject(err);
-                    spinner.fail(tf(`下载失败!错误${err}`));
+                    reject(`下载失败!错误${err}`);
                 } else {
                     reolve();
                     spinner.succeed(ts("下载完成!"));
@@ -110,18 +109,11 @@ async function askQuestions() {
  * @param { Object } bin
  * @return { Pormise }
  */
-function execCommand(bin, args, option) {
-    return new Promise((reslove, reject) => {
-        const childProcess = execa(bin, args, option);
-        childProcess.stdout.pipe(process.stdout);
-        childProcess.stderr.pipe(process.stderr);
-        childProcess.on("close", () => {
-            reslove();
-        });
-        childProcess.on("error", error => {
-            reject(error);
-        });
-    });
+async function execCommand(bin, args, option) {
+    const childProcess = execa(bin, args, option);
+    childProcess.stdout.pipe(process.stdout);
+    // childProcess.stderr.pipe(process.stderr);
+    return await childProcess;
 }
 /**
  * @description 獲取項目包管理器
@@ -160,8 +152,7 @@ function installDependencies(packageManager, project) {
             spinner.succeed(ts("安裝完成!"));
         })
         .catch(error => {
-            spinner.error(tf(`安裝失败! 错误: ${error}`));
-            throw error;
+            throw `安裝失败! 错误: ${error}`;
         });
 }
 // /**
@@ -197,6 +188,8 @@ export default async function (project) {
         console.log(
             `🏃要运行项目，请按照下面脚本执行: \n 1.cd ${project} \n 2.${packageManager} run dev `
         );
+    } catch (e) {
+        spinner.fail(tf(e));
     } finally {
         spinner.clear();
     }
