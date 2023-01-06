@@ -19,6 +19,9 @@
     "url": "https://github.com/JhonLandy/nuomi-app",
     "directory": "一个项目下载脚手架，内置eclecton脚手架"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "dependencies": {
     "chalk": "^5.2.0",
     "commander": "^9.4.1",
